@@ -17,4 +17,10 @@ class Repairmen extends Model
       // code...
       return $this->hasMany('App\RepairmenItem');
     }
+
+    public function RepairJobRepairmen()
+    {
+      // code...
+      return $this->hasMany('App\RepairJobRepairmen');
+    }
 }
