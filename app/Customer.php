@@ -8,7 +8,7 @@ class Customer extends Model
 {
     //
     protected $primaryKey = 'CustomerId';
-    public $timestamp = false;
+    public $timestamps = false;
     protected $fillable = ['CustomerId','LastName','FirstName','MI','Email','Mobile','HTel','AddressLine1','AddressLine2','City','State','PostCode'];
 
     public function RepairJobs()

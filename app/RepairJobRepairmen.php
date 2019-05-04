@@ -8,7 +8,7 @@ class RepairJobRepairmen extends Model
 {
     //
     protected $table = 'RepairJobRepairmen';
-    public $timestamp = false;
+    public $timestamps = false;
     protected $primaryKey = 'RepJobMenId';
     protected $fillable = ['RepJobMenId','DateStarted','DateEnded','Comments','JobNum','RepairmenId'];
 

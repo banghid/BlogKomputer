@@ -13,14 +13,14 @@ class RepairmenTableSeeder extends Seeder
     public function run()
     {
         //
-        $faker = Faker::create();
-        DB::table('Repairmen')->insert([
-          'LastName' => $faker->lastName,
-          'FirstName' => $faker->firstName,
-          'Email' => $faker->freeEmail,
-          'Mobile' => $faker->e164PhoneNumber,
-          'HTel' => rand()
-
-        ]);
+        // $faker = Faker::create();
+        // DB::table('Repairmen')->insert([
+        //   'LastName' => $faker->lastName,
+        //   'FirstName' => $faker->firstName,
+        //   'Email' => $faker->freeEmail,
+        //   'Mobile' => $faker->e164PhoneNumber,
+        //   'HTel' => rand()
+        //
+        // ]);
     }
 }

@@ -8,7 +8,7 @@ class Computer extends Model
 {
     //
     protected $primaryKey = 'ComputerId';
-    public $timestamp = false;
+    public $timestamps = false;
     protected $fillable = ['ComputerId','SerialNum','Make','Model','ComputerDescription','CustomerId'];
 
     public function Customer()

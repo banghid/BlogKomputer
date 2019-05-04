@@ -9,7 +9,7 @@ class Repairmen extends Model
     //
     protected $table = 'Repairmen';
     protected $primaryKey = 'RepairmenId';
-    public $timestamp = false;
+    public $timestamps = false;
     protected $fillable = ['RepaimenId','LastName','FirstName','MI','Email','Mobile','HTel'];
 
     public function RepairmenItems()

@@ -8,7 +8,7 @@ class Deposit extends Model
 {
     //
     protected $primaryKey = 'DepositNum';
-    public $timestamp = false;
+    public $timestamps = false;
     protected $fillable = ['DepositDate','DepositNum','Amount','JobNum'];
 
     public function RepairJob()

@@ -8,7 +8,7 @@ class RepairJobItem extends Model
 {
     //
     protected $primaryKey = 'RepJobItemId';
-    public $timestamp = false;
+    public $timestamps = false;
     protected $fillable = ['DateUsed','RepJobItemId','Quantity','TotalCost','JobNum','ItemId'];
 
     public function Item()

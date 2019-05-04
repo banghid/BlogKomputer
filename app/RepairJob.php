@@ -8,7 +8,7 @@ class RepairJob extends Model
 {
     //
     protected $primaryKey = 'JobNum';
-    public $timestamp = false;
+    public $timestamps = false;
     protected $fillable = ['JobNum','DateReceived','DateReturned','DateEnded','LabourCost','TotalCost','CustomerId','ComputerId'];
 
     public function RepairJobItems()
