@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class RepairJob extends Model
 {
     //
+    protected $table = 'RepairJobs';
     protected $primaryKey = 'JobNum';
     public $timestamps = false;
     protected $fillable = ['JobNum','DateReceived','DateReturned','DateEnded','LabourCost','TotalCost','CustomerId','ComputerId'];

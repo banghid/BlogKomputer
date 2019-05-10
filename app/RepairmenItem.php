@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class RepairmenItem extends Model
 {
     //
+    protected $table = 'RepairmenItems';
     protected $primaryKey = 'RepmenItemId';
     public $timestamps = false;
     protected $fillable = ['RepmenItemId','DateOrdered','Quantity','TotalCost','ItemId','RepairmenId'];
