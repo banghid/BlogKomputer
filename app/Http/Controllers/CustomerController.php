@@ -33,10 +33,10 @@ class CustomerController extends Controller
       return redirect()->back();
     }
 
-    public function deleteCustomer($id)
+    public function deleteCustomer(Customer $customer)
     {
       // code...
-      Customer::find($id)->delete();
+      $customer->delete();
       return redirect()->back();
     }
 

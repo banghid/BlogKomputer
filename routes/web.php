@@ -24,3 +24,5 @@ Route::get('/customer/{customer}','CustomerController@getData');
 Route::post('/customer','CustomerController@inputCustomer')->name('customer.input');
 
 Route::post('/customer/edit/{customer}','CustomerController@editCustomer')->name('customer.edit');
+
+Route::get('/customer/delete/{customer}','CustomerController@deleteCustomer')->name('customer.delete');

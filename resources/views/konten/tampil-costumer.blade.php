@@ -79,6 +79,7 @@ Tampil Data Customer
         <th>Email</th>
         <th>City</th>
         <th>Edit</th>
+        <th>Delete</th>
       </tr>
       @foreach($data as $customer)
       <tr>
@@ -87,13 +88,13 @@ Tampil Data Customer
         <td>{{ $customer->Email }}</td>
         <td>{{ $customer->City }}</td>
         <td>
-          <button type="button" data-toggle="modal" data-target="#modalEditCustomer{{$customer->CustomerId}}" class="btn btn-success">Edit Customer</button>
+          <button type="button" data-toggle="modal" data-target="#modalEditCustomer{{$customer->CustomerId}}" class="btn btn-success">Edit</button>
           <!-- Modal-->
           <div id="modalEditCustomer{{$customer->CustomerId}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
             <div role="document" class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h4 id="exampleModalLabel" class="modal-title">Tambah Data Customer</h4>
+                  <h4 id="exampleModalLabel" class="modal-title">Edit Data Customer</h4>
                   <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
                 </div>
                 <div class="modal-body">
@@ -147,6 +148,9 @@ Tampil Data Customer
               </div>
             </div>
           </div>
+        </td>
+        <td>
+          <a href="{{route('customer.delete',$customer->CustomerId)}}" class="btn btn-danger">Hapus</a>
         </td>
       </tr>
       @endforeach
