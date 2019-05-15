@@ -40,7 +40,7 @@ class DatabaseSeeder extends Seeder
         //     'PostCode' => $faker->postCode
         //   ]);
         // }
-
+        //
         // $query = [];
         // for ($i=0; $i < 1000 ; $i++) {
         //   // code...
@@ -53,7 +53,7 @@ class DatabaseSeeder extends Seeder
         //
         // }
         // DB::table((new \App\Item)->getTable())->insert($query);
-
+        //
         // $query = [];
         // for ($i=0; $i <1000 ; $i++) {
         //   // code...
@@ -66,7 +66,7 @@ class DatabaseSeeder extends Seeder
         //   ];
         // }
         // DB::table((new \App\Computer)->getTable())->insert($query);
-
+        //
         // $queryRepairJob = [];
         // for ($i=0; $i <1000 ; $i++) {
         //   // code...
@@ -80,11 +80,10 @@ class DatabaseSeeder extends Seeder
         //     'CustomerId' => $computer->CustomerId,
         //     'ComputerId' => $computer->ComputerId
         //
-        //
         //   ];
         // }
         // DB::table((new \App\RepairJob)->getTable())->insert($queryRepairJob);
-
+        //
         // $queryRepJobMen = [];
         // for ($i=0; $i <1000 ; $i++) {
         //   // code...
@@ -98,7 +97,7 @@ class DatabaseSeeder extends Seeder
         //   ];
         // }
         // DB::table((new \App\RepairJobRepairmen)->getTable())->insert($queryRepJobMen);
-
+        //
         // $queryRepJobItem = [];
         // for ($i=0; $i <1000 ; $i++) {
         //   // code...
@@ -113,7 +112,7 @@ class DatabaseSeeder extends Seeder
         //   ];
         // }
         // DB::table((new \App\RepairJobItem)->getTable())->insert($queryRepJobItem);
-
+        //
         // $queryRepItem = [];
         // for ($i=0; $i <1000 ; $i++) {
         //   // code...
@@ -128,7 +127,7 @@ class DatabaseSeeder extends Seeder
         //   ];
         // }
         // DB::table((new \App\RepairmenItem)->getTable())->insert($queryRepItem);
-
+        //
         // $queryDeposit = [];
         // for ($i=0; $i <1000 ; $i++) {
         //   // code...
@@ -139,9 +138,6 @@ class DatabaseSeeder extends Seeder
         //   ];
         // }
         // DB::table((new \App\Payment)->getTable())->insert($queryDeposit);
-
-
-
 
 
     }

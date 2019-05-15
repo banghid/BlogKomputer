@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/customer','CustomerController@getCustomer');
 
 Route::get('/customer/{customer}','CustomerController@getData');
+
+Route::get('/customer/edit/{customer}','CustomerController@editCustomer')->name('customer.edit');
+
+Route::get('/customer/tampil/','CustomerController@getCustomer')->name('customer.tampil');
