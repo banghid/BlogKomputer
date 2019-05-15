@@ -29,8 +29,8 @@ class CustomerController extends Controller
     public function inputCustomer(Request $request)
     {
       // code...
-      $customer = \App\Customer::create($request->only('LastName','FirstName','MI','Email','Mobile','HTel','AddressLine1','AddressLine2','City','State','PostCode'));
-      return redirect()->route('costumer.tampil');
+      $customer = \App\Customer::create($request->only('LastName','FirstName','Email','Mobile','HTel','AddressLine1','AddressLine2','City','State','PostCode'));
+      return redirect()->back();
     }
 
     public function deleteCustomer($id)

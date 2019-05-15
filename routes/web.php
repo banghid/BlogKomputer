@@ -19,8 +19,8 @@ Route::get('/customer','CustomerController@getCustomer');
 
 Route::get('/customer/{customer}','CustomerController@getData');
 
-Route::get('/customer/edit/{customer}','CustomerController@editCustomer')->name('customer.edit');
+// Route::get('/customer/edit/{customer}','CustomerController@editCustomer')->name('customer.edit');
 
-Route::get('/customer/tampil/','CustomerController@getCustomer')->name('customer.tampil');
+Route::post('/customer','CustomerController@inputCustomer')->name('customer.input');
 
-Route::post('/customer/tampil/','CustomerController@inputCustomer')->name('customer.input');
+Route::post('/customer/edit/{customer}','CustomerController@editCustomer')->name('customer.edit');

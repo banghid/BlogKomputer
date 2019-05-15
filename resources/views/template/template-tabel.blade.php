@@ -14,12 +14,18 @@
     <link rel="stylesheet" href="{{asset('/css/style.default.css')}}" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="{{asset('/css/custom.css')}}">
-    <script src="/js/jquery.min.js"></script>
+    <!-- JavaScript files-->
+    <script src="{{asset('/js/jquery-3.3.1.slim.min.js')}}"></script>
     <script src="{{asset('/js/popper.min.js')}}"> </script>
     <script src="{{asset('/js/bootstrap.min.js')}}"></script>
     <script src="{{asset('/js/jquery.cookie.js')}}"> </script>
     <script src="{{asset('/js/Chart.min.js')}}"></script>
     <script src="{{asset('/js/jquery.validate.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('/js/charts-home.js')}}">
+
+    </script>
+    <!-- Main File-->
+    <script src="{{asset('/js/front.js')}}"></script>
   </head>
   <body>
     @yield('konten')
