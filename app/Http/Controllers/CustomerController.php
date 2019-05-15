@@ -8,11 +8,12 @@ use App\Customer;
 class CustomerController extends Controller
 {
     //
+
     public function getCustomer()
     {
       // code...
       $data = Customer::all();
-      return $data;
+      return view('konten.tampil-costumer')->with('data', $data);
 
     }
 
@@ -29,7 +30,7 @@ class CustomerController extends Controller
     {
       // code...
       $customer = \App\Customer::create($request->only('LastName','FirstName','MI','Email','Mobile','HTel','AddressLine1','AddressLine2','City','State','PostCode'));
-      return redirect()->route('costumer.all');
+      return redirect()->route('costumer.tampil');
     }
 
     public function deleteCustomer($id)
@@ -47,5 +48,5 @@ class CustomerController extends Controller
       return redirect()->back();
     }
 
-    
+
 }
