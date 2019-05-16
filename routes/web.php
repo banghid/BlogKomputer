@@ -12,10 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('konten.landing-page');
 });
 
-Route::get('/customer','CustomerController@getCustomer');
+Route::get('/computer','ComputerController@getComputer')->name('computer.tampil');
+
+Route::get('/customer','CustomerController@getCustomer')->name('customer.tampil');
 
 Route::get('/customer/{customer}','CustomerController@getData');
 
