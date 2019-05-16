@@ -36,6 +36,8 @@ class CustomerController extends Controller
     public function deleteCustomer(Customer $customer)
     {
       // code...
+      $computer = \App\Computer::where('CustomerId', $customer->CustomerId);
+      $computer->delete();
       $customer->delete();
       return redirect()->back();
     }
