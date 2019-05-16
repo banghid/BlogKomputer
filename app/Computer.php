@@ -14,12 +14,12 @@ class Computer extends Model
     public function Customer()
     {
       // code...
-      return $this->belongsTo('App\Customer');
+      return $this->belongsTo('App\Customer','CustomerId');
     }
 
     public function RepairJobs()
     {
       // code...
-      return $this->hasMany('App\RepairJob');
+      return $this->hasMany('App\RepairJob','JobNum','JobNum');
     }
 }

@@ -15,30 +15,30 @@ class RepairJob extends Model
     public function RepairJobItems()
     {
       // code...
-      return $this->hasMany('App\RepairJobItem');
+      return $this->hasMany('App\RepairJobItem','JobNum','JobNum');
     }
 
     public function Deposits()
     {
       // code...
-      return $this->hasMany('App\Deposit');
+      return $this->hasMany('App\Deposit','JobNum','JobNum');
     }
 
     public function Payments()
     {
       // code...
-      return $this->hasMany('App\Payment');
+      return $this->hasMany('App\Payment','JobNum','JobNum');
     }
 
     public function Customer()
     {
       // code...
-      return $this->belongsTo('App\Customer');
+      return $this->belongsTo('App\Customer','CustomerId');
     }
 
     public function Computer()
     {
       // code...
-      return $this->belongsTo('App\Computer');
+      return $this->belongsTo('App\Computer','ComputerId');
     }
 }

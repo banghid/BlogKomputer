@@ -14,12 +14,12 @@ class Customer extends Model
     public function RepairJobs()
     {
       // code...
-      return $this->hasMany('App\RepairJob');
+      return $this->hasMany('App\RepairJob','JobNum','JobNum');
     }
 
     public function Computers()
     {
       // code...
-      return $this->hasMany('App\Computer');
+      return $this->hasMany('App\Computer','ComputerId','ComputerId');
     }
 }

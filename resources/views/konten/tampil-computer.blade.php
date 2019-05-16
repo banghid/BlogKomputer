@@ -17,7 +17,7 @@ Tampil Data Computer
 <tr>
   <td>{{$computer->SerialNum}}</td>
   <td>{{$computer->Model}}</td>
-  <td>{{$computer->Costumer}}</td>
+  <td>{{$computer->Customer->FirstName}}</td>
 </tr>
 @endforeach
 </table>

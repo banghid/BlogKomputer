@@ -14,6 +14,6 @@ class Payment extends Model
     public function RepairJob()
     {
       // code...
-      return $this->belongsTo('App\RepairJob');
+      return $this->belongsTo('App\RepairJob','JobNum');
     }
 }

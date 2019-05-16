@@ -15,12 +15,12 @@ class RepairmenItem extends Model
     public function Item()
     {
       // code...
-      return $this->belongsTo('App\Item');
+      return $this->belongsTo('App\Item','ItemId');
     }
 
     public function Repairmen()
     {
       // code...
-      return $this->belongsTo('App\Repairmen');
+      return $this->belongsTo('App\Repairmen','RepairmenId');
     }
 }

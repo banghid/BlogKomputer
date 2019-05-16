@@ -15,12 +15,12 @@ class RepairJobRepairmen extends Model
     public function RepairJob()
     {
       // code...
-      return $this->belongsTo('App\RepairJob');
+      return $this->belongsTo('App\RepairJob','JobNum');
     }
 
     public function Repairmen()
     {
       // code...
-      return $this->belongsTo('App\Repairmen');
+      return $this->belongsTo('App\Repairmen','RepairmenId');
     }
 }

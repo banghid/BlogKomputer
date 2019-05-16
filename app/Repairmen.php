@@ -15,12 +15,12 @@ class Repairmen extends Model
     public function RepairmenItems()
     {
       // code...
-      return $this->hasMany('App\RepairmenItem');
+      return $this->hasMany('App\RepairmenItem','RepaimenId','RepaimenId');
     }
 
     public function RepairJobRepairmen()
     {
       // code...
-      return $this->hasMany('App\RepairJobRepairmen');
+      return $this->hasMany('App\RepairJobRepairmen','RepaimenId','RepaimenId');
     }
 }

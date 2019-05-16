@@ -14,6 +14,6 @@ class Item extends Model
     public function RepairmenItems()
     {
       // code...
-      return $this->hasMany('App\RepairmenItem');
+      return $this->hasMany('App\RepairmenItem','ItemId','ItemId');
     }
 }
