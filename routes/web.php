@@ -21,6 +21,8 @@ Route::get('/customer','CustomerController@getCustomer')->name('customer.tampil'
 
 Route::post('/computer','ComputerController@inputComputer')->name('computer.input');
 
+Route::post('/computer/edit/{computer}','ComputerController@editComputer')->name('computer.edit');
+
 Route::get('/customer/{customer}','CustomerController@getData');
 
 // Route::get('/customer/edit/{customer}','CustomerController@editCustomer')->name('customer.edit');

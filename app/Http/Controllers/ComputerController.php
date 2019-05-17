@@ -21,4 +21,12 @@ class ComputerController extends Controller
       $computer = \App\Computer::create($request->only('SerialNum','Model','CustomerId'));
       return redirect()->route('computer.tampil');
     }
+
+    public function editComputer(Computer $computer,Request $request)
+    {
+      // code...
+      $computer->fill($request->only('SerialNum','Model','CustomerId'));
+      $computer->save();
+      return redirect()->route('computer.tampil');
+    }
 }
