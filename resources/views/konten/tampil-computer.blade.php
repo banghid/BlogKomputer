@@ -53,6 +53,7 @@ Tampil Data Computer
   <th>Model</th>
   <th>Owner</th>
   <th>Edit</th>
+  <th>Delete</th>
 </tr>
 @foreach($data['computer'] as $computer)
 <tr>
@@ -94,6 +95,7 @@ Tampil Data Computer
         </div>
       </div>
     </div></td>
+    <td> <a href="{{route('computer.delete',$computer->ComputerId)}}" class="btn btn-danger">Delete</a> </td>
 </tr>
 @endforeach
 </table>

@@ -29,4 +29,21 @@ class ComputerController extends Controller
       $computer->save();
       return redirect()->route('computer.tampil');
     }
+
+    public function deleteComputer(Computer $computer)
+    {
+      // code...
+      $repairjob = \App\RepairJob::where('ComputerId',$computer->ComputerId);
+      $deposit = [];
+      $payment = [];
+      $repairjobitem = [];
+      for ($i=0; $i < length($repairjob) ; $i++) {
+        $deposit[] = \App\Deposit::where('JobNum',$repairjob->JobNum)->delete();
+        $payment[] = \App\Payment::where('JobNum',$repairjob->JobNum)->delete();
+        $repairjobitem[] = \App\RepairJobItem::where('JobNum',$repairjob->JobNum)->delete();
+      }
+
+      $computer->delete();
+      return redirect()->route('computer.tampil');
+    }
 }

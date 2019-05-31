@@ -25,6 +25,8 @@ Route::post('/computer/edit/{computer}','ComputerController@editComputer')->name
 
 Route::get('/customer/{customer}','CustomerController@getData');
 
+Route::get('/computer/delete/{computer}','ComputerController@deleteComputer')->name('computer.delete');
+
 // Route::get('/customer/edit/{customer}','CustomerController@editCustomer')->name('customer.edit');
 
 Route::post('/customer','CustomerController@inputCustomer')->name('customer.input');
