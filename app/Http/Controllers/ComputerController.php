@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 use App\Computer;
 
 class ComputerController extends Controller
@@ -45,5 +46,27 @@ class ComputerController extends Controller
 
       $computer->delete();
       return redirect()->route('computer.tampil');
+    }
+
+    public function index()
+    {
+      // code...
+      $computer = Computer::all();
+      return \Response::json($computer,200);
+    }
+
+    public function store()
+    {
+      // code...
+      $computer = new Computer;
+      $computer->SerialNum = Input::get('SerialNum');
+      $computer->Model = Input::get('Model');
+      $computer->CustomerId = Input::get('CustomerId');
+      $success = $computer->save();
+      if (!$success) {
+        // code...
+        return \Response::json("Error saving",500);
+      }
+      return \Response::json("Success",200);
     }
 }

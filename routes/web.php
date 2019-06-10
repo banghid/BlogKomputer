@@ -34,3 +34,7 @@ Route::post('/customer','CustomerController@inputCustomer')->name('customer.inpu
 Route::post('/customer/edit/{customer}','CustomerController@editCustomer')->name('customer.edit');
 
 Route::get('/customer/delete/{customer}','CustomerController@deleteCustomer')->name('customer.delete');
+
+Route::group(array('prefix'=>'api'),function(){
+	Route::resource('computers','ComputerController',array('except'=>array('store','update','edit','destroy','show','create')));
+});
